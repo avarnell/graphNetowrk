@@ -4,11 +4,15 @@ block content
 
   h1=user.name
 
-  =JSON.stringify(connections)
+
+  ul
+    for r,k in results
+      li=list[k].name
+      = r 
 
   h2 Connections
 
-  ul
-    for connection in connections
-      li
-        a(href='/users/' + connection.id)=connection.name
+  //- ul
+  //-   for connection in connections
+  //-     li
+  //-       a(href='/users/' + connection.other_id)=connection.name
